@@ -1,0 +1,28 @@
+# This is a Spack Environment file.
+#
+# It describes a set of packages to be installed, along with
+# configuration settings.
+spack:
+  # add package specs to the `specs` list
+  specs:
+  - python
+  - py-jupyter
+  - py-jupyterlab
+  - py-jupyterlab-server
+  view: true
+  concretizer:
+    unify: true
+  compilers:
+  - compiler:
+      spec: apple-clang@=15.0.0
+      paths:
+        cc: /usr/bin/clang
+        cxx: /usr/bin/clang++
+        f77: null
+        fc: null
+      flags: {}
+      operating_system: sonoma
+      target: aarch64
+      modules: []
+      environment: {}
+      extra_rpaths: []
